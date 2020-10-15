@@ -8,7 +8,7 @@
 		<div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
 			<div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
 				@if (session('status'))
-				<div class="success mt-5 px-4 text-green-900">
+				<div class="success mt-5 px-4 text-red-900">
 					{{ session('status') }}
 				</div>
 				@endif
@@ -28,6 +28,10 @@
 							<tr>
 							<th class="px-3 py-3 text-center border">レシピ名</th>
 								<td class="px-3 py-3 border">{{ $recipe->name }}</td>
+							</tr>
+							<tr>
+							<th class="px-3 py-3 text-center border">レシピ動画</th>
+								<td class="px-3 py-3 border">{{ $recipe->url }}</td>
 							</tr>
 							<tr>
 							<th class="px-3 py-3 text-center border">作成日</th>

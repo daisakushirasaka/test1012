@@ -60,7 +60,7 @@ class RecipeController extends Controller
 		
 		return redirect()->action(__CLASS__ . "@show",[
 			"id" => $id
-		])->withStatus("更新しました");
+		])->withStatus("おめでとうございます！レシピが更新されました！");
 	}
 
 	/**

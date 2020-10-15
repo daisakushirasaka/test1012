@@ -8,7 +8,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 @if (session('status'))
-				<div class="success mt-5 px-4 text-green-900">
+				<div class="success mt-5 px-4 text-red-900">
 					{{ session('status') }}
 				</div>
 				@endif
@@ -42,7 +42,7 @@
 							@endif
 						</div>
 						<div class="mb-4">
-							<label for="recipe_description" class="block mb-2">レシピ説明（材料もこちらにご記入ください）</label>
+							<label for="recipe_description" class="block mb-2">作り方（材料もこちらにご記入ください）</label>
 							<textarea type="text" 
 								id="recipe_description" 
 								class="form-input w-full" 

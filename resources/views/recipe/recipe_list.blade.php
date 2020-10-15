@@ -8,7 +8,7 @@
 		<div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
 			<div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
 				@if (session('status'))
-				<div class="success mt-5 px-4 text-green-900">
+				<div class="success mt-5 px-4 text-red-900">
 					{{ session('status') }}
 				</div>
 				@endif
@@ -30,11 +30,11 @@
 						<tbody>
 						@foreach($recipe_list as $recipe)
 						<tr>
-							<td class="px-3 py-3 border">{{ $recipe->id }}</td>
-							<td class="px-3 py-3 border">{{ $recipe->name }}</td>
-							<td class="px-3 py-3 border">{{ $recipe->created_at->format("Y-m-d H:i:s") }}</td>
-							<td class="px-3 py-3 border">{{ $recipe->updated_at->format("Y-m-d H:i:s") }}</td>
-							<td class="px-3 py-3 border">
+							<td class="px-3 py-3 text-center border">{{ $recipe->id }}</td>
+							<td class="px-3 py-3 text-center border">{{ $recipe->name }}</td>
+							<td class="px-3 py-3 text-center border">{{ $recipe->created_at->format("Y-m-d H:i:s") }}</td>
+							<td class="px-3 py-3 text-center border">{{ $recipe->updated_at->format("Y-m-d H:i:s") }}</td>
+							<td class="px-3 py-3 text-center border">
 								<a href="{{ route('recipe_detail', ['id' => $recipe->id]) }}" class="bg-blue-500 text-white font-bold py-2 px-4 rounded">詳細</a>
 							</td>
 						</tr>

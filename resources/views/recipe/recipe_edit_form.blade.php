@@ -1,14 +1,14 @@
 <x-app-layout>
    <x-slot name="header">
        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-           レシピ変更
+           HAHAごはん レシピ変更
        </h2>
    </x-slot>
 	<div class="py-12">
 		<div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
 			<div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
 				@if (session('status'))
-				<div class="success mt-5 px-4 text-green-900">
+				<div class="success mt-5 px-4 text-red-900">
 					{{ session('status') }}
 				</div>
 				@endif
@@ -42,7 +42,7 @@
 							@endif
 						</div>
 						<div class="mb-4">
-							<label for="recipe_description" class="block mb-2">レシピ説明（材料もこちらにご記入ください）</label>
+							<label for="recipe_description" class="block mb-2">作り方（材料もこちらにご記入ください）</label>
 							<textarea type="text" 
 								id="recipe_description" 
 								class="form-input w-full" 
@@ -53,7 +53,6 @@
 							<span class="error mb-4 text-red-900">{{ $errors->first('description') }}</span>
 							@endif
 						</div>
-						
 						<div class="mb-4 flex items-center">
 							<input type="submit" value="保存" class="bg-blue-500 text-white font-bold py-2 px-4 rounded" />
 						</div>
